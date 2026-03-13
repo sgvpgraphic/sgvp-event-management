@@ -343,13 +343,13 @@ export default function EventDetailsPage() {
                 </button>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-stretch">
                 {fields.length === 0 && (
                   <div className="text-xs text-gray-400">Add button par click karo, fields select karo.</div>
                 )}
 
                 {(has("Category") || has("Place") || has("Time")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full h-full flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
                         <div className="md:col-span-2">
@@ -611,7 +611,7 @@ export default function EventDetailsPage() {
                 )}
 
                 {(has("Location") || has("Flyer") || has("Count") || has("Name") || has("Year") || has("Day") || customSelected.length > 0) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full h-full flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Location") && (
                         <div className="md:col-span-2">
