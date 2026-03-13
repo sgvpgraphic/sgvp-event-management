@@ -221,12 +221,6 @@ export default function SchedulePage() {
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
-                    <button
-                      onClick={() => setNowForRow(rowIndices)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
-                    >
-                      Now
-                    </button>
                   </div>
                   <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
                   <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
@@ -249,6 +243,12 @@ export default function SchedulePage() {
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
+                    <button
+                      onClick={() => setNowForRow(rowIndices)}
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                    >
+                      Now
+                    </button>
                     
                   </div>
                 </div>
