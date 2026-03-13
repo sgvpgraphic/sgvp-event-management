@@ -227,7 +227,7 @@ export default function EventDetailsPage() {
           <div className="flex items-center gap-4">
             <a
               href="/dashboard"
-              className="text-[11px] font-semibold text-gray-600 hover:text-[#d41c4a] transition-colors"
+              className="text-[12px] font-semibold text-gray-600 hover:text-[#d41c4a] transition-colors"
             >
               ← Back
             </a>
@@ -262,7 +262,7 @@ export default function EventDetailsPage() {
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
-              <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
+              <span className="hidden md:block text-[12px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
             </div>
             <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
               <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start">
@@ -309,7 +309,7 @@ export default function EventDetailsPage() {
                 </div>
               </div>
 
-              <div className="mt-4 flex gap-2 md:gap-3 text-[11px] overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0 md:justify-between">
+              <div className="mt-4 flex gap-2 md:gap-3 text-[12px] overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0 md:justify-between">
                 {[
                   { label: "Basic Info", color: "bg-[#fde7c7]", href: "/event-details" },
                   { label: "Schedule", color: "bg-[#dff3f9]", href: "/schedule" },
@@ -321,7 +321,7 @@ export default function EventDetailsPage() {
                   <a
                     key={tab.label}
                     href={tab.href}
-                    className={`min-w-[96px] md:min-w-0 md:flex-1 rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md ${
+                    className={`min-w-[96px] md:min-w-0 md:flex-1 rounded-md ${tab.color} px-2 py-3 text-center font-semibold shadow-md ${
                       tab.label === "Basic Info"
                         ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
                         : "text-gray-700"
@@ -337,7 +337,7 @@ export default function EventDetailsPage() {
               <div className="mt-5 flex justify-center">
                 <button
                   onClick={() => setShowPicker(true)}
-                  className="px-4 py-2 rounded-md bg-black text-white text-[11px] hover:bg-gray-800"
+                  className="px-4 py-2 rounded-md bg-black text-white text-[12px] hover:bg-gray-800"
                 >
                   + Add
                 </button>
@@ -353,11 +353,11 @@ export default function EventDetailsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
                         <div className="md:col-span-2">
-                          <div className="text-[11px] font-semibold text-gray-600">Category</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Category</div>
                           <div className="mt-2 relative">
                             <button
                               onClick={() => setShowCategoryAdd((v) => !v)}
-                              className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600 text-left"
+                              className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600 text-left"
                             >
                               {selectedCategory || "Select"}
                             </button>
@@ -367,9 +367,9 @@ export default function EventDetailsPage() {
                                   value={categorySearch}
                                   onChange={(e) => setCategorySearch(e.target.value)}
                                   placeholder="Search..."
-                                  className="h-8 w-full rounded-md border border-gray-200 px-2 text-[11px]"
+                                  className="h-8 w-full rounded-md border border-gray-200 px-2 text-[12px]"
                                 />
-                                <div className="mt-2 max-h-36 overflow-auto text-[11px]">
+                                <div className="mt-2 max-h-36 overflow-auto text-[12px]">
                                   {categoryOptions
                                     .filter((opt) =>
                                       opt.toLowerCase().includes(categorySearch.toLowerCase())
@@ -396,7 +396,7 @@ export default function EventDetailsPage() {
                                       if (e.key === "Enter") addCategory();
                                     }}
                                     placeholder="Add"
-                                    className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[11px]"
+                                    className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[12px]"
                                   />
                                   <button
                                     onClick={addCategory}
@@ -412,12 +412,12 @@ export default function EventDetailsPage() {
                       )}
                       {has("Place") && (
                         <div className="md:col-span-2">
-                          <div className="text-[11px] font-semibold text-gray-600">Place</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Place</div>
                           <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-3">
                             <select
                               value={selectedState}
                               onChange={(e) => setSelectedState(e.target.value)}
-                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600"
+                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600"
                             >
                               <option value="">State</option>
                               {states.map((s) => (
@@ -429,7 +429,7 @@ export default function EventDetailsPage() {
                             <select
                               value={selectedDistrict}
                               onChange={(e) => setSelectedDistrict(e.target.value)}
-                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600"
+                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600"
                               disabled={!selectedState}
                             >
                               <option value="">District</option>
@@ -442,7 +442,7 @@ export default function EventDetailsPage() {
                             <select
                               value={selectedVillage}
                               onChange={(e) => setSelectedVillage(e.target.value)}
-                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600"
+                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600"
                               disabled={!selectedDistrict}
                             >
                               <option value="">Village</option>
@@ -457,10 +457,10 @@ export default function EventDetailsPage() {
                       )}
                       {has("Time") && (
                         <div className="md:col-span-2">
-                          <div className="text-[11px] font-semibold text-gray-600">Time</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Time</div>
                           <div className="mt-2 grid grid-cols-2 gap-3">
                             <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-                              <div className="flex items-center justify-between text-[11px] text-gray-600 mb-2">
+                              <div className="flex items-center justify-between text-[12px] text-gray-600 mb-2">
                                 <span>Start</span>
                                 <span>{formatTimeParts(startHour, startMinute, startPeriod)}</span>
                               </div>
@@ -506,7 +506,7 @@ export default function EventDetailsPage() {
                                   );
                                 })}
                               </div>
-                              <div className="grid grid-cols-4 gap-2 text-[11px]">
+                              <div className="grid grid-cols-4 gap-2 text-[12px]">
                                 {[0,15,30,45].map((m) => (
                                   <button
                                     key={`sm-${m}`}
@@ -532,7 +532,7 @@ export default function EventDetailsPage() {
                               </div>
                             </div>
                             <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-                              <div className="flex items-center justify-between text-[11px] text-gray-600 mb-2">
+                              <div className="flex items-center justify-between text-[12px] text-gray-600 mb-2">
                                 <span>End</span>
                                 <span>{formatTimeParts(endHour, endMinute, endPeriod)}</span>
                               </div>
@@ -578,7 +578,7 @@ export default function EventDetailsPage() {
                                   );
                                 })}
                               </div>
-                              <div className="grid grid-cols-4 gap-2 text-[11px]">
+                              <div className="grid grid-cols-4 gap-2 text-[12px]">
                                 {[0,15,30,45].map((m) => (
                                   <button
                                     key={`em-${m}`}
@@ -608,11 +608,11 @@ export default function EventDetailsPage() {
                       )}
                       {has("Location") && (
                         <div className="md:col-span-2">
-                          <div className="text-[11px] font-semibold text-gray-600">Location</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Location</div>
                           <div className="mt-2 grid grid-cols-2 gap-3">
                             <button
                               onClick={fetchCurrentLocation}
-                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-left text-[11px] text-gray-600 hover:border-[#d41c4a]"
+                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-left text-[12px] text-gray-600 hover:border-[#d41c4a]"
                             >
                               {locLoading
                                 ? "Locating..."
@@ -622,14 +622,14 @@ export default function EventDetailsPage() {
                             </button>
                             <input
                               placeholder="Paste Link"
-                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600"
+                              className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600"
                             />
                           </div>
                         </div>
                       )}
                       {has("Flyer") && (
                         <div className="md:col-span-2">
-                          <div className="text-[11px] font-semibold text-gray-600">Flyer</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Flyer</div>
                           <div className="mt-2 flex items-center gap-3">
                             {[0,1].map((i) => (
                               <label key={i} className="w-20 h-20 rounded-lg border border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-[10px] text-gray-500 cursor-pointer hover:border-[#d41c4a] overflow-hidden">
@@ -658,9 +658,9 @@ export default function EventDetailsPage() {
 
                       {customSelected.map((field) => (
                         <div key={field}>
-                          <div className="text-[11px] font-semibold text-gray-600">{field}</div>
+                          <div className="text-[12px] font-semibold text-gray-600">{field}</div>
                           {optionMap[field]?.type === "checkbox" && (
-                            <label className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-between px-3 text-[11px] text-gray-600">
+                            <label className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-between px-3 text-[12px] text-gray-600">
                               <span>Enable</span>
                               <input type="checkbox" />
                             </label>
@@ -669,7 +669,7 @@ export default function EventDetailsPage() {
                             <div className="mt-2 relative">
                               <button
                                 onClick={() => setOpenDropdownField((v) => (v === field ? null : field))}
-                                className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600 text-left"
+                                className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600 text-left"
                               >
                                 {selectedDropdownValue[field] || "Select"}
                               </button>
@@ -681,9 +681,9 @@ export default function EventDetailsPage() {
                                       setDropdownSearch((prev) => ({ ...prev, [field]: e.target.value }))
                                     }
                                     placeholder="Search..."
-                                    className="h-8 w-full rounded-md border border-gray-200 px-2 text-[11px]"
+                                    className="h-8 w-full rounded-md border border-gray-200 px-2 text-[12px]"
                                   />
-                                  <div className="mt-2 max-h-28 overflow-auto text-[11px]">
+                                  <div className="mt-2 max-h-28 overflow-auto text-[12px]">
                                     {(customDropdownOptions[field] ?? [])
                                       .filter((opt) =>
                                         opt.toLowerCase().includes((dropdownSearch[field] || "").toLowerCase())
@@ -708,7 +708,7 @@ export default function EventDetailsPage() {
                                         setDropdownAdd((prev) => ({ ...prev, [field]: e.target.value }))
                                       }
                                       placeholder="Add new"
-                                      className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[11px]"
+                                      className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[12px]"
                                     />
                                     <button
                                       onClick={() => addCustomDropdownOption(field)}
@@ -724,7 +724,7 @@ export default function EventDetailsPage() {
                           {optionMap[field]?.type === "date" && (
                             <input
                               type="date"
-                              className="mt-2 h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[11px] text-gray-600"
+                              className="mt-2 h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-600"
                             />
                           )}
                           {!optionMap[field]?.type || optionMap[field]?.type === "text" ? (
@@ -741,25 +741,25 @@ export default function EventDetailsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Count") && (
                         <div>
-                          <div className="text-[11px] font-semibold text-gray-600">Count</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Count</div>
                           <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
                         </div>
                       )}
                       {has("Name") && (
                         <div>
-                          <div className="text-[11px] font-semibold text-gray-600">Name</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Name</div>
                           <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-end pr-2 text-gray-400 text-xs">+</div>
                         </div>
                       )}
                       {has("Year") && (
                         <div>
-                          <div className="text-[11px] font-semibold text-gray-600">Year</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Year</div>
                           <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
                         </div>
                       )}
                       {has("Day") && (
                         <div>
-                          <div className="text-[11px] font-semibold text-gray-600">Day</div>
+                          <div className="text-[12px] font-semibold text-gray-600">Day</div>
                           <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
                         </div>
                       )}
@@ -797,7 +797,7 @@ export default function EventDetailsPage() {
                 ))}
               </div>
               <div className="mt-4">
-                <div className="text-[11px] text-gray-600 mb-2">Add Custom Field</div>
+                <div className="text-[12px] text-gray-600 mb-2">Add Custom Field</div>
                 <div className="flex items-center gap-2">
                   <input
                     value={customField}
@@ -806,12 +806,12 @@ export default function EventDetailsPage() {
                       if (e.key === "Enter") addCustomField();
                     }}
                     placeholder="New field name"
-                    className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[11px]"
+                    className="h-8 flex-1 rounded-md border border-gray-200 px-2 text-[12px]"
                   />
                   <select
                     value={customType}
                     onChange={(e) => setCustomType(e.target.value as FieldOption["type"])}
-                    className="h-8 rounded-md border border-gray-200 px-2 text-[11px]"
+                    className="h-8 rounded-md border border-gray-200 px-2 text-[12px]"
                   >
                     <option value="text">Text</option>
                     <option value="checkbox">Checkbox</option>
@@ -820,7 +820,7 @@ export default function EventDetailsPage() {
                   </select>
                   <button
                     onClick={addCustomField}
-                    className="h-8 px-3 rounded-md bg-[#d41c4a] text-white text-[11px] hover:bg-[#b5143e]"
+                    className="h-8 px-3 rounded-md bg-[#d41c4a] text-white text-[12px] hover:bg-[#b5143e]"
                   >
                     Add
                   </button>
@@ -829,13 +829,13 @@ export default function EventDetailsPage() {
               <div className="mt-5 flex justify-end gap-2">
                 <button
                   onClick={() => setShowPicker(false)}
-                  className="px-3 py-2 rounded-md border border-gray-200 text-[11px] text-gray-600 hover:bg-gray-50"
+                  className="px-3 py-2 rounded-md border border-gray-200 text-[12px] text-gray-600 hover:bg-gray-50"
                 >
                   Close
                 </button>
                 <button
                   onClick={() => setShowPicker(false)}
-                  className="px-3 py-2 rounded-md bg-[#d41c4a] text-white text-[11px] hover:bg-[#b5143e]"
+                  className="px-3 py-2 rounded-md bg-[#d41c4a] text-white text-[12px] hover:bg-[#b5143e]"
                 >
                   Apply
                 </button>
@@ -864,7 +864,7 @@ export default function EventDetailsPage() {
               />
             </div>
             <div className="mt-3 flex justify-end gap-2">
-              <label className="px-3 py-2 rounded-md bg-[#d41c4a] text-white text-[11px] hover:bg-[#b5143e] cursor-pointer">
+              <label className="px-3 py-2 rounded-md bg-[#d41c4a] text-white text-[12px] hover:bg-[#b5143e] cursor-pointer">
                 Change
                 <input
                   type="file"
@@ -878,7 +878,7 @@ export default function EventDetailsPage() {
               </label>
               <button
                 onClick={() => setPreviewIndex(null)}
-                className="px-3 py-2 rounded-md border border-gray-200 text-[11px] text-gray-600 hover:bg-gray-50"
+                className="px-3 py-2 rounded-md border border-gray-200 text-[12px] text-gray-600 hover:bg-gray-50"
               >
                 Done
               </button>

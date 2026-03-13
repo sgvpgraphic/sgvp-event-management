@@ -19,7 +19,7 @@ export default function MediaPage() {
           <div className="flex items-center gap-4">
             <a
               href="/dashboard"
-              className="text-[11px] font-semibold text-gray-600 hover:text-[#d41c4a] transition-colors"
+              className="text-[12px] font-semibold text-gray-600 hover:text-[#d41c4a] transition-colors"
             >
               ← Back
             </a>
@@ -52,7 +52,7 @@ export default function MediaPage() {
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
-              <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
+              <span className="hidden md:block text-[12px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
             </div>
             <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
               <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start">
@@ -96,12 +96,12 @@ export default function MediaPage() {
                 </span>
               </div>
 
-              <div className="mt-4 flex gap-2 md:gap-3 text-[11px] overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0 md:justify-between">
+              <div className="mt-4 flex gap-2 md:gap-3 text-[12px] overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0 md:justify-between">
                 {tabs.map((tab) => (
                   <a
                     key={tab.label}
                     href={tab.href}
-                    className={`min-w-[96px] md:min-w-0 md:flex-1 rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md ${
+                    className={`min-w-[96px] md:min-w-0 md:flex-1 rounded-md ${tab.color} px-2 py-3 text-center font-semibold shadow-md ${
                       tab.label === "Media"
                         ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
                         : "text-gray-700"
