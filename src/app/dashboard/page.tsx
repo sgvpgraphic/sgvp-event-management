@@ -159,7 +159,7 @@ export default function DashboardPage() {
                   </a>
               </div>
             </nav>
-            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90" />
+            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90 md:mt-auto self-center" />
           </div>
 
           {/* Main */}

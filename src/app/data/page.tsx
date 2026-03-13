@@ -81,7 +81,7 @@ export default function DataPage() {
                   </a>
               </div>
             </nav>
-            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90 z-10" />
+            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90 md:mt-auto self-center z-10" />
             <div className="hidden md:block absolute bottom-0 left-0 right-0 h-24 opacity-20 pointer-events-none">
               <img src="/Image/building.png" alt="Building" className="w-full h-full object-contain object-bottom" />
             </div>
