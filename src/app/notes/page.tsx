@@ -47,40 +47,40 @@ export default function NotesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] min-h-screen items-start">
-          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-4 md:p-6 flex flex-col items-start md:items-center justify-start md:justify-between gap-4 relative overflow-hidden h-full">
-            <div className="flex flex-col items-start md:items-center gap-2 z-10 w-full">
-              <div className="w-10 h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
+          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-3 md:p-6 flex flex-row md:flex-col items-center md:items-center justify-between gap-3 relative overflow-hidden h-full">
+            <div className="flex flex-row md:flex-col items-center gap-2 z-10 w-full md:w-auto">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
-              <span className="text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
-              <nav className="mt-6 w-full">
-                <div className="flex flex-col gap-3">
+              <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
+            </div>
+            <nav className="w-full md:mt-6 md:w-full overflow-x-auto">
+              <div className="flex flex-row md:flex-col gap-4 md:gap-3 justify-center md:justify-start">
                   <a
                     href="/dashboard"
-                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors"
+                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
                   >
                     <LayoutGrid className="w-4 h-4" />
-                    Dashboard
+                    <span className="hidden md:inline">Dashboard</span>
                   </a>
-                  <div className="h-px bg-gray-100"></div>
+                  <div className="hidden md:block h-px bg-gray-100"></div>
                   <a
                     href="/create"
-                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors"
+                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
                   >
                     <PlusSquare className="w-4 h-4" />
-                    Add Event
+                    <span className="hidden md:inline">Add Event</span>
                   </a>
-                  <div className="h-px bg-gray-100"></div>
+                  <div className="hidden md:block h-px bg-gray-100"></div>
                   <a
                     href="/settings"
-                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors"
+                    className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
                   >
                     <Settings className="w-4 h-4" />
-                    Settings
+                    <span className="hidden md:inline">Settings</span>
                   </a>
-                </div>
-              </nav>
-            </div>
+              </div>
+            </nav>
             <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90 z-10" />
             <div className="hidden md:block absolute bottom-0 left-0 right-0 h-24 opacity-20 pointer-events-none">
               <img src="/Image/building.png" alt="Building" className="w-full h-full object-contain object-bottom" />
@@ -96,12 +96,12 @@ export default function NotesPage() {
                 </span>
               </div>
 
-              <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
+              <div className="mt-4 flex gap-2 text-[11px] overflow-x-auto pb-2">
                 {tabs.map((tab) => (
                   <a
                     key={tab.label}
                     href={tab.href}
-                    className={`rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md min-w-[120px] ${
+                    className={`min-w-[96px] rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md ${
                       tab.label === "Notes"
                         ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
                         : "text-gray-700"
