@@ -292,7 +292,6 @@ export default function SchedulePage() {
 
               <div className="mt-4 flex items-center gap-4 text-[12px] text-gray-600">
                 <button onClick={addRow} className="no-print hover:text-[#d41c4a]">+ Add Schedule</button>
-                <button onClick={addSpeakerRow} className="no-print hover:text-[#d41c4a]">+ Add Speaker</button>
                 <button
                   onClick={() => window.print()}
                   className="no-print hover:text-[#d41c4a]"
@@ -304,7 +303,15 @@ export default function SchedulePage() {
               <div className="mt-4 space-y-2">
                 {speakerRows.map((value, idx) => (
                   <div key={idx} className="flex items-center justify-end gap-2">
-                    <span className="text-[12px] text-gray-500">Add Speaker</span>
+                    <div className="flex flex-col items-end gap-1">
+                      <button
+                        onClick={addSpeakerRow}
+                        className="no-print text-[12px] text-gray-600 hover:text-[#d41c4a]"
+                      >
+                        + Add Speaker
+                      </button>
+                      <span className="text-[12px] text-gray-500">Add Speaker</span>
+                    </div>
                     <input
                       value={value}
                       onChange={(e) => updateSpeakerRow(idx, e.target.value)}
