@@ -157,4 +157,21 @@ body {
   .no-print {
     display: none !important;
   }
+
+  .schedule-print input,
+  .schedule-print button,
+  .schedule-print select {
+    height: 30px !important;
+    min-height: 30px !important;
+    font-size: 10px !important;
+    padding: 0 6px !important;
+  }
+
+  .schedule-print input {
+    width: auto !important;
+  }
+
+  .schedule-print {
+    font-size: 10px !important;
+  }
 }

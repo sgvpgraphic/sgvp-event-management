@@ -153,7 +153,7 @@ export default function SchedulePage() {
                 ))}
               </div>
 
-              <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
+              <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4 schedule-print">
               <div className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto_auto] gap-2 text-[12px]">
                 <div className="flex items-center gap-0">
                   <input
