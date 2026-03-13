@@ -199,7 +199,7 @@ export default function SchedulePage() {
                   />
                   <button
                     onClick={() => setNowForRow([0, 1, 2, 3])}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                    className="no-print h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
                   >
                     Now
                   </button>
@@ -207,7 +207,7 @@ export default function SchedulePage() {
                 </div>
                 <button
                   onClick={() => removeRow(0)}
-                  className="h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
+                  className="no-print h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
                   title="Remove row"
                 >
                   ✕
@@ -263,7 +263,7 @@ export default function SchedulePage() {
                     />
                     <button
                       onClick={() => setNowForRow(rowIndices)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                      className="no-print h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
                     >
                       Now
                     </button>
@@ -271,7 +271,7 @@ export default function SchedulePage() {
                   </div>
                   <button
                     onClick={() => removeRow(id)}
-                    className="h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
+                    className="no-print h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
                     title="Remove row"
                   >
                     ✕
@@ -280,8 +280,14 @@ export default function SchedulePage() {
               )})}
 
               <div className="mt-4 flex items-center gap-4 text-[12px] text-gray-600">
-                <button onClick={addRow} className="hover:text-[#d41c4a]">+ Add Schedule</button>
-                <button className="hover:text-[#d41c4a]">+ Add Speaker</button>
+                <button onClick={addRow} className="no-print hover:text-[#d41c4a]">+ Add Schedule</button>
+                <button className="no-print hover:text-[#d41c4a]">+ Add Speaker</button>
+                <button
+                  onClick={() => window.print()}
+                  className="no-print hover:text-[#d41c4a]"
+                >
+                  Print A4
+                </button>
               </div>
 
               <div className="mt-4 flex justify-end">
