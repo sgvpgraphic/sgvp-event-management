@@ -141,12 +141,12 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[0] = el;
                     }}
-                    className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:00 pm"
                   />
                   <button
                     onClick={() => setNow(0)}
-                    className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
@@ -157,25 +157,25 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[1] = el;
                     }}
-                    className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 am"
                   />
                   <button
                     onClick={() => setNow(1)}
-                    className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
                 </div>
-                <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
-                <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
-                <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="Other" />
+                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
+                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
+                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="Other" />
                 <div className="flex items-center gap-2">
                   <input
                     ref={(el) => {
                       if (el) timeRefs.current[2] = el;
                     }}
-                    className="h-9 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 pm"
                   />
                   <div className="text-gray-400">to</div>
@@ -183,12 +183,12 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[3] = el;
                     }}
-                    className="h-9 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:30 am"
                   />
                   <button
                     onClick={() => setNow(2)}
-                    className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
@@ -202,12 +202,12 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[4 + i * 3] = el;
                       }}
-                      className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
                     <button
                       onClick={() => setNow(4 + i * 3)}
-                      className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
@@ -218,32 +218,32 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[5 + i * 3] = el;
                       }}
-                      className="h-9 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
                     <button
                       onClick={() => setNow(5 + i * 3)}
-                      className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
                   </div>
-                  <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
-                  <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
-                  <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Other" />
+                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
+                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
+                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Other" />
                   <div className="flex items-center gap-2">
                     <input
                       ref={(el) => {
                         if (el) timeRefs.current[6 + i * 3] = el;
                       }}
-                      className="h-9 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
                     <div className="text-gray-400">to</div>
-                    <input className="h-9 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
+                    <input className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
                     <button
                       onClick={() => setNow(6 + i * 3)}
-                      className="h-9 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
