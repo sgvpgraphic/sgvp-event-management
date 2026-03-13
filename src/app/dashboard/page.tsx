@@ -79,7 +79,7 @@ export default function DashboardPage() {
   }, [linePath, points]);
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f7f3f0] via-[#f2f6f8] to-[#eef1f7] flex items-stretch justify-stretch p-0">
-      <div className="w-full min-h-screen bg-[#f5f5f5] rounded-none shadow-none overflow-hidden">
+      <div className="w-full min-h-screen bg-[#f5f5f5] rounded-none shadow-none overflow-hidden flex flex-col">
         {/* Top Bar */}
         <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-white animate-fade-in shadow-[0_2px_8px_rgba(15,23,42,0.03)]" style={{ animationDelay: "80ms" }}>
           <div className="text-[10px] font-semibold tracking-[0.3em] text-gray-500 uppercase">
@@ -123,7 +123,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Body */}
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] min-h-[520px]">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] flex-1 min-h-0">
           {/* Sidebar */}
           <div className="border-r border-gray-200 bg-white p-6 flex flex-col items-center justify-between animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
             <div className="flex flex-col items-center gap-2 w-full">
