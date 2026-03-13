@@ -95,7 +95,7 @@ export default function DashboardPage() {
             </div>
             <div className="hidden md:block w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
             <div className="hidden md:block w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
-            <div className="relative">
+            <div className="relative hidden md:block">
               <button
                 className="flex items-center gap-2 text-xs text-gray-700"
                 onClick={() => setAdminOpen((v) => !v)}

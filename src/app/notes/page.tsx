@@ -37,7 +37,7 @@ export default function NotesPage() {
             </div>
             <div className="hidden md:block w-6 h-6 rounded-full bg-gray-100"></div>
             <div className="hidden md:block w-6 h-6 rounded-full bg-gray-100"></div>
-            <div className="flex items-center gap-2 text-xs text-gray-700">
+            <div className="hidden md:flex items-center gap-2 text-xs text-gray-700">
               <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-[10px] font-semibold">
                 A
               </div>
