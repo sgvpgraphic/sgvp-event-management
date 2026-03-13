@@ -14,6 +14,7 @@ export default function SchedulePage() {
   ];
   const timeRefs = useRef<HTMLInputElement[]>([]);
   const [activeTimeIndex, setActiveTimeIndex] = useState<number | null>(null);
+  const [rows, setRows] = useState<number[]>([1, 2]);
   const formatNow = () => {
     const d = new Date();
     let h = d.getHours();
@@ -33,6 +34,16 @@ export default function SchedulePage() {
       return;
     }
     setNow(indices[0]);
+  };
+  const addRow = () => {
+    setRows((prev) => {
+      const nextId = prev.length === 0 ? 1 : Math.max(...prev) + 1;
+      return [...prev, nextId];
+    });
+  };
+  const removeRow = (id: number) => {
+    if (!window.confirm("Remove this schedule row?")) return;
+    setRows((prev) => prev.filter((r) => r !== id));
   };
 
   return (
@@ -196,11 +207,11 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              {[1, 2].map((i) => {
-                const base = 4 + (i - 1) * 4;
+              {rows.map((id, idx) => {
+                const base = 4 + idx * 4;
                 const rowIndices = [base, base + 1, base + 2, base + 3];
                 return (
-                <div key={i} className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px] mt-3">
+                <div key={id} className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto_auto] gap-2 text-[12px] mt-3">
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
@@ -251,11 +262,18 @@ export default function SchedulePage() {
                     </button>
                     
                   </div>
+                  <button
+                    onClick={() => removeRow(id)}
+                    className="h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
+                    title="Remove row"
+                  >
+                    ✕
+                  </button>
                 </div>
               )})}
 
               <div className="mt-4 flex items-center gap-4 text-[12px] text-gray-600">
-                <button className="hover:text-[#d41c4a]">+ Add Schedule</button>
+                <button onClick={addRow} className="hover:text-[#d41c4a]">+ Add Schedule</button>
                 <button className="hover:text-[#d41c4a]">+ Add Speaker</button>
               </div>
 
