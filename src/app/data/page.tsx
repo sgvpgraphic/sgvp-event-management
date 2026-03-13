@@ -15,7 +15,7 @@ export default function DataPage() {
   return (
     <div className="min-h-screen bg-[#bdbdbd] flex items-stretch justify-stretch p-0">
       <div className="w-full min-h-screen bg-white rounded-none shadow-none relative pt-12">
-        <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-white z-10">
+        <div className="absolute top-0 left-0 right-0 flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 md:px-6 py-3 border-b border-gray-100 bg-white z-10">
           <div className="flex items-center gap-4">
             <a
               href="/dashboard"
@@ -27,16 +27,16 @@ export default function DataPage() {
               || Jay Swaminarayan ||
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="relative">
+          <div className="flex items-center justify-between md:justify-end gap-3 md:gap-4">
+            <div className="relative hidden md:block">
               <input
                 type="text"
                 placeholder="Search..."
                 className="h-8 w-44 rounded-md border border-gray-200 bg-gray-50 px-3 text-xs focus:outline-none"
               />
             </div>
-            <div className="w-6 h-6 rounded-full bg-gray-100"></div>
-            <div className="w-6 h-6 rounded-full bg-gray-100"></div>
+            <div className="hidden md:block w-6 h-6 rounded-full bg-gray-100"></div>
+            <div className="hidden md:block w-6 h-6 rounded-full bg-gray-100"></div>
             <div className="flex items-center gap-2 text-xs text-gray-700">
               <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-[10px] font-semibold">
                 A
@@ -47,8 +47,8 @@ export default function DataPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] min-h-screen items-start">
-          <div className="border-r border-gray-100 p-6 flex flex-col items-center justify-between relative overflow-hidden h-full">
-            <div className="flex flex-col items-center gap-2 z-10 w-full">
+          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-4 md:p-6 flex flex-col items-start md:items-center justify-start md:justify-between gap-4 relative overflow-hidden h-full">
+            <div className="flex flex-col items-start md:items-center gap-2 z-10 w-full">
               <div className="w-10 h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
@@ -81,13 +81,13 @@ export default function DataPage() {
                 </div>
               </nav>
             </div>
-            <img src="/Image/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90 z-10" />
-            <div className="absolute bottom-0 left-0 right-0 h-24 opacity-20 pointer-events-none">
+            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90 z-10" />
+            <div className="hidden md:block absolute bottom-0 left-0 right-0 h-24 opacity-20 pointer-events-none">
               <img src="/Image/building.png" alt="Building" className="w-full h-full object-contain object-bottom" />
             </div>
           </div>
 
-          <div className="h-screen w-full px-6 pt-6 pb-10 overflow-y-auto">
+          <div className="h-screen w-full px-4 md:px-6 pt-6 pb-10 overflow-y-auto">
             <div className="flex items-center gap-3">
               <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
               <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">

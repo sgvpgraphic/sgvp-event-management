@@ -81,20 +81,20 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#f7f3f0] via-[#f2f6f8] to-[#eef1f7] flex items-stretch justify-stretch p-0">
       <div className="w-full min-h-screen bg-[#f5f5f5] rounded-none shadow-none overflow-hidden flex flex-col">
         {/* Top Bar */}
-        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-white animate-fade-in shadow-[0_2px_8px_rgba(15,23,42,0.03)]" style={{ animationDelay: "80ms" }}>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 md:px-6 py-3 border-b border-gray-100 bg-white animate-fade-in shadow-[0_2px_8px_rgba(15,23,42,0.03)]" style={{ animationDelay: "80ms" }}>
           <div className="text-[10px] font-semibold tracking-[0.3em] text-gray-500 uppercase">
             || Jay Swaminarayan ||
           </div>
-          <div className="flex items-center gap-4">
-            <div className="relative">
+          <div className="flex items-center justify-between md:justify-end gap-3 md:gap-4">
+            <div className="relative hidden md:block">
               <input
                 type="text"
                 placeholder="Search..."
                 className="h-8 w-44 rounded-md border border-white/60 bg-white/80 px-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#d41c4a]"
               />
             </div>
-            <div className="w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
-            <div className="w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
+            <div className="hidden md:block w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
+            <div className="hidden md:block w-6 h-6 rounded-full bg-white/70 border border-white/70"></div>
             <div className="relative">
               <button
                 className="flex items-center gap-2 text-xs text-gray-700"
@@ -125,8 +125,8 @@ export default function DashboardPage() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] flex-1 min-h-0">
           {/* Sidebar */}
-          <div className="border-r border-gray-200 bg-white p-6 flex flex-col items-center justify-between animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
-            <div className="flex flex-col items-center gap-2 w-full">
+          <div className="border-b md:border-b-0 md:border-r border-gray-200 bg-white p-4 md:p-6 flex flex-col items-start md:items-center justify-start md:justify-between gap-4 animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
+            <div className="flex flex-col items-start md:items-center gap-2 w-full">
               <div className="w-10 h-10 rounded-xl border border-white/70 bg-white/80 flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
@@ -159,7 +159,7 @@ export default function DashboardPage() {
                 </div>
               </nav>
             </div>
-            <img src="/Image/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90" />
+            <img src="/Image/logo.png" alt="SGVP Logo" className="hidden md:block w-24 object-contain opacity-90" />
           </div>
 
           {/* Main */}
