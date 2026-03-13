@@ -343,12 +343,12 @@ export default function EventDetailsPage() {
                 </button>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
+              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 {fields.length === 0 && (
                   <div className="text-xs text-gray-400">Add button par click karo, fields select karo.</div>
                 )}
 
-                {(has("Category") || has("Place") || has("Time") || has("Location") || has("Flyer")) && (
+                {(has("Category") || has("Place") || has("Time")) && (
                   <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
@@ -606,6 +606,13 @@ export default function EventDetailsPage() {
                           </div>
                         </div>
                       )}
+                    </div>
+                  </div>
+                )}
+
+                {(has("Location") || has("Flyer") || has("Count") || has("Name") || has("Year") || has("Day") || customSelected.length > 0) && (
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Location") && (
                         <div className="md:col-span-2">
                           <div className="text-[12px] font-semibold text-gray-600">Location</div>
@@ -655,7 +662,30 @@ export default function EventDetailsPage() {
                           </div>
                         </div>
                       )}
-
+                      {has("Count") && (
+                        <div>
+                          <div className="text-[12px] font-semibold text-gray-600">Count</div>
+                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
+                        </div>
+                      )}
+                      {has("Name") && (
+                        <div>
+                          <div className="text-[12px] font-semibold text-gray-600">Name</div>
+                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-end pr-2 text-gray-400 text-xs">+</div>
+                        </div>
+                      )}
+                      {has("Year") && (
+                        <div>
+                          <div className="text-[12px] font-semibold text-gray-600">Year</div>
+                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
+                        </div>
+                      )}
+                      {has("Day") && (
+                        <div>
+                          <div className="text-[12px] font-semibold text-gray-600">Day</div>
+                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
+                        </div>
+                      )}
                       {customSelected.map((field) => (
                         <div key={field}>
                           <div className="text-[12px] font-semibold text-gray-600">{field}</div>
@@ -732,37 +762,6 @@ export default function EventDetailsPage() {
                           ) : null}
                         </div>
                       ))}
-                    </div>
-                  </div>
-                )}
-
-                {(has("Count") || has("Name") || has("Year") || has("Day")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {has("Count") && (
-                        <div>
-                          <div className="text-[12px] font-semibold text-gray-600">Count</div>
-                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
-                        </div>
-                      )}
-                      {has("Name") && (
-                        <div>
-                          <div className="text-[12px] font-semibold text-gray-600">Name</div>
-                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-end pr-2 text-gray-400 text-xs">+</div>
-                        </div>
-                      )}
-                      {has("Year") && (
-                        <div>
-                          <div className="text-[12px] font-semibold text-gray-600">Year</div>
-                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
-                        </div>
-                      )}
-                      {has("Day") && (
-                        <div>
-                          <div className="text-[12px] font-semibold text-gray-600">Day</div>
-                          <div className="mt-2 h-9 rounded-lg border border-gray-200 bg-gray-50"></div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 )}
