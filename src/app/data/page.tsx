@@ -88,34 +88,36 @@ export default function DataPage() {
           </div>
 
           <div className="h-screen w-full px-4 md:px-6 pt-6 pb-10 overflow-y-auto">
-            <div className="flex items-center gap-3">
-              <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
-              <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
-                Data
-              </span>
-            </div>
+            <div className="w-full max-w-6xl 2xl:max-w-[88rem] mx-auto">
+              <div className="flex items-center gap-3">
+                <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
+                <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
+                  Data
+                </span>
+              </div>
 
-            <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
-              {tabs.map((tab) => (
-                <a
-                  key={tab.label}
-                  href={tab.href}
-                  className={`rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md min-w-[120px] ${
-                    tab.label === "Data"
-                      ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
-                      : "text-gray-700"
-                  }`}
-                >
-                  {tab.label}
-                  {tab.label === "Data" && (
-                    <span className="absolute left-0 right-0 -bottom-2 h-[2px] bg-[#b32038]"></span>
-                  )}
-                </a>
-              ))}
-            </div>
+              <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
+                {tabs.map((tab) => (
+                  <a
+                    key={tab.label}
+                    href={tab.href}
+                    className={`rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md min-w-[120px] ${
+                      tab.label === "Data"
+                        ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {tab.label}
+                    {tab.label === "Data" && (
+                      <span className="absolute left-0 right-0 -bottom-2 h-[2px] bg-[#b32038]"></span>
+                    )}
+                  </a>
+                ))}
+              </div>
 
-            <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-6">
-              <div className="text-sm text-gray-500">Data view will appear here.</div>
+              <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-6">
+                <div className="text-sm text-gray-500">Data view will appear here.</div>
+              </div>
             </div>
           </div>
         </div>

@@ -83,7 +83,7 @@ export default function SettingsPage() {
 
           {/* Main */}
           <div className="h-full w-full px-4 md:px-8 flex items-start justify-center pt-6">
-            <div className="w-full max-w-3xl">
+            <div className="w-full max-w-5xl 2xl:max-w-6xl mx-auto">
               <h1 className="text-sm font-semibold text-[#d41c4a]">Settings</h1>
               <p className="text-xs text-gray-500 mt-1">Manage your SGVP Event Diary preferences.</p>
 

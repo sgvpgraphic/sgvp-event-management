@@ -92,34 +92,35 @@ export default function SchedulePage() {
 
           {/* Main */}
           <div className="h-screen w-full px-4 md:px-6 pt-6 pb-10 overflow-y-auto">
-            <div className="flex items-center gap-3">
-              <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
-              <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
-                Schedule
-              </span>
-            </div>
+            <div className="w-full max-w-6xl 2xl:max-w-[88rem] mx-auto">
+              <div className="flex items-center gap-3">
+                <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
+                <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
+                  Schedule
+                </span>
+              </div>
 
-            <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
-              {tabs.map((tab) => (
-                <a
-                  key={tab.label}
-                  href={tab.href}
-                  className={`rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md min-w-[120px] ${
-                    tab.label === "Schedule"
-                      ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
-                      : "text-gray-700"
-                  }`}
-                >
-                  {tab.label}
-                  {tab.label === "Schedule" && (
-                    <span className="absolute left-0 right-0 -bottom-2 h-[2px] bg-[#b32038]"></span>
-                  )}
-                </a>
-              ))}
-            </div>
+              <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
+                {tabs.map((tab) => (
+                  <a
+                    key={tab.label}
+                    href={tab.href}
+                    className={`rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md min-w-[120px] ${
+                      tab.label === "Schedule"
+                        ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {tab.label}
+                    {tab.label === "Schedule" && (
+                      <span className="absolute left-0 right-0 -bottom-2 h-[2px] bg-[#b32038]"></span>
+                    )}
+                  </a>
+                ))}
+              </div>
 
-            <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
-              <div className="grid grid-cols-7 gap-3 text-[12px]">
+              <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
+                <div className="grid grid-cols-7 gap-3 text-[12px]">
                 <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="05:00 pm" />
                 <div className="flex items-center justify-center text-gray-400">to</div>
                 <input className="h-9 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="05:15 am" />
@@ -158,6 +159,7 @@ export default function SchedulePage() {
                 <div className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-[12px] text-gray-700">
                   પૂજ્ય શ્રીપુરુષોત્તમદાસજી સ્વામી
                 </div>
+              </div>
               </div>
             </div>
           </div>

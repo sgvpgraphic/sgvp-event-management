@@ -105,7 +105,7 @@ export default function CreateEventPage() {
           {/* Main */}
           <div className="h-full w-full px-4 md:px-8 flex items-center justify-center overflow-y-auto">
             <div
-              className={`grid items-center transition-all duration-300 ${
+              className={`grid items-center transition-all duration-300 w-full max-w-6xl 2xl:max-w-[88rem] mx-auto ${
                 selectedIndex === null
                   ? "grid-cols-1 gap-0 justify-items-center"
                   : "grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 w-full"
