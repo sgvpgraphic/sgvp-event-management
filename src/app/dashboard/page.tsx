@@ -164,7 +164,7 @@ export default function DashboardPage() {
 
           {/* Main */}
           <div className="p-6 bg-white w-full">
-            <div className="w-full max-w-7xl 2xl:max-w-[88rem] mx-auto">
+            <div className="w-full max-w-none mx-auto">
             <h1 className="text-base font-semibold text-[#d41c4a] tracking-wide animate-fade-up" style={{ animationDelay: "160ms" }}>
               SGVP Event Diary
             </h1>
