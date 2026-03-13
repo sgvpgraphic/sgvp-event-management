@@ -194,7 +194,7 @@ export default function CreateEventPage() {
                         selectedIndex === null
                           ? "translate-x-0"
                           : isSelected
-                          ? `shadow-xl scale-105 border-2 ${borderClass}`
+                          ? `shadow-xl scale-105 border-2 ${borderClass} translate-x-6`
                           : "opacity-70 -translate-y-1"
                       }`}
                     >
@@ -216,7 +216,7 @@ export default function CreateEventPage() {
                 className={`transition-all duration-500 ease-out flex justify-center self-center ${
                   selectedIndex === null
                     ? "opacity-0 translate-x-10 pointer-events-none"
-                    : "opacity-100 translate-x-0"
+                    : "opacity-100 translate-x-0 animate-slide-in"
                 }`}
               >
                 {selectedIndex !== null && (
