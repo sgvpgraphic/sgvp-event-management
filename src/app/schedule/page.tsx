@@ -195,14 +195,16 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              {[1, 2].map((i) => (
+              {[1, 2].map((i) => {
+                const base = 4 + (i - 1) * 4;
+                return (
                 <div key={i} className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px] mt-3">
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
-                        if (el) timeRefs.current[4 + i * 3] = el;
+                        if (el) timeRefs.current[base] = el;
                       }}
-                      onFocus={() => setActiveTimeIndex(4 + i * 3)}
+                      onFocus={() => setActiveTimeIndex(base)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
@@ -211,9 +213,9 @@ export default function SchedulePage() {
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
-                        if (el) timeRefs.current[5 + i * 3] = el;
+                        if (el) timeRefs.current[base + 1] = el;
                       }}
-                      onFocus={() => setActiveTimeIndex(5 + i * 3)}
+                      onFocus={() => setActiveTimeIndex(base + 1)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
@@ -224,30 +226,30 @@ export default function SchedulePage() {
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
-                        if (el) timeRefs.current[6 + i * 3] = el;
+                        if (el) timeRefs.current[base + 2] = el;
                       }}
-                      onFocus={() => setActiveTimeIndex(6 + i * 3)}
+                      onFocus={() => setActiveTimeIndex(base + 2)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
                     <div className="text-gray-400 px-1">to</div>
                     <input
                       ref={(el) => {
-                        if (el) timeRefs.current[7 + i * 3] = el;
+                        if (el) timeRefs.current[base + 3] = el;
                       }}
-                      onFocus={() => setActiveTimeIndex(7 + i * 3)}
+                      onFocus={() => setActiveTimeIndex(base + 3)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
                     <button
-                      onClick={() => setNowFor([6 + i * 3, 7 + i * 3])}
+                      onClick={() => setNowFor([base + 2, base + 3])}
                       className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
                   </div>
                 </div>
-              ))}
+              )})}
 
               <div className="mt-4 flex items-center gap-4 text-[12px] text-gray-600">
                 <button className="hover:text-[#d41c4a]">+ Add Schedule</button>
