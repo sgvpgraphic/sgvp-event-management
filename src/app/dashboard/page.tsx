@@ -128,7 +128,7 @@ export default function DashboardPage() {
           <div className="border-r border-gray-200 bg-white p-6 flex flex-col items-center justify-between animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
             <div className="flex flex-col items-center gap-2 w-full">
               <div className="w-10 h-10 rounded-xl border border-white/70 bg-white/80 flex items-center justify-center shadow-sm">
-                <img src="/images/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
+                <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
               <span className="text-[11px] text-[#d41c4a] font-semibold tracking-wide">SGVP Event Diary</span>
               <nav className="mt-6 w-full">
@@ -159,7 +159,7 @@ export default function DashboardPage() {
                 </div>
               </nav>
             </div>
-            <img src="/images/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90" />
+            <img src="/Image/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90" />
           </div>
 
           {/* Main */}

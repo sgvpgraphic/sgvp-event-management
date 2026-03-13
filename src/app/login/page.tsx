@@ -13,7 +13,7 @@ export default function LoginPage() {
           {/* Main Logo */}
           <div className="w-40 h-40 flex items-center justify-center relative z-10">
             <Image
-              src="/images/event.jpg"
+              src="/Image/event.jpg"
               alt="Event Logo"
               width={120}
               height={120}
@@ -25,7 +25,7 @@ export default function LoginPage() {
           {/* Building Background */}
           <div className="absolute bottom-0 left-0 right-0 h-44 sm:h-56 md:h-72 lg:h-96 opacity-20 pointer-events-none flex items-end">
             <Image
-              src="/images/building.png"
+              src="/Image/building.png"
               alt="SGVP Building"
               fill
               className="object-contain object-bottom"
@@ -37,7 +37,7 @@ export default function LoginPage() {
           {/* Bottom Logo */}
           <div className="absolute bottom-6 flex flex-col items-center z-10">
             <Image
-              src="/images/logo.png"
+              src="/Image/logo.png"
               alt="SGVP Logo"
               width={120}
               height={40}

@@ -11,7 +11,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2 group">
               <div className="bg-white border border-gray-200 rounded-lg w-9 h-9 flex items-center justify-center overflow-hidden shadow-sm">
                 <Image
-                  src="/images/app-logo.jpg"
+                  src="/Image/app-logo.jpg"
                   alt="Event Logo"
                   width={28}
                   height={28}

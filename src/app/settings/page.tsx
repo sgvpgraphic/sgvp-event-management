@@ -44,7 +44,7 @@ export default function SettingsPage() {
           <div className="border-r border-gray-100 p-6 flex flex-col items-center justify-between relative overflow-hidden h-full">
             <div className="flex flex-col items-center gap-2 z-10 w-full">
               <div className="w-10 h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
-                <img src="/images/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
+                <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
               <span className="text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
               <nav className="mt-6 w-full">
@@ -75,9 +75,9 @@ export default function SettingsPage() {
                 </div>
               </nav>
             </div>
-            <img src="/images/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90 z-10" />
+            <img src="/Image/logo.png" alt="SGVP Logo" className="w-24 object-contain opacity-90 z-10" />
             <div className="absolute bottom-0 left-0 right-0 h-24 opacity-20 pointer-events-none">
-              <img src="/images/building.png" alt="Building" className="w-full h-full object-contain object-bottom" />
+              <img src="/Image/building.png" alt="Building" className="w-full h-full object-contain object-bottom" />
             </div>
           </div>
 
