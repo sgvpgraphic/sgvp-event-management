@@ -154,7 +154,7 @@ export default function SchedulePage() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
-              <div className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px]">
+              <div className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto_auto] gap-2 text-[12px]">
                 <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
@@ -205,6 +205,13 @@ export default function SchedulePage() {
                   </button>
                   
                 </div>
+                <button
+                  onClick={() => removeRow(0)}
+                  className="h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
+                  title="Remove row"
+                >
+                  ✕
+                </button>
               </div>
 
               {rows.map((id, idx) => {
