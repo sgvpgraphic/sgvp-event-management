@@ -141,7 +141,7 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[0] = el;
                     }}
-                    className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:00 pm"
                   />
                   <button
@@ -157,7 +157,7 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[1] = el;
                     }}
-                    className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 am"
                   />
                   <button
@@ -175,7 +175,7 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[2] = el;
                     }}
-                    className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 pm"
                   />
                   <div className="text-gray-400">to</div>
@@ -183,7 +183,7 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[3] = el;
                     }}
-                    className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                    className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:30 am"
                   />
                   <button
@@ -202,7 +202,7 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[4 + i * 3] = el;
                       }}
-                      className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
                     <button
@@ -218,7 +218,7 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[5 + i * 3] = el;
                       }}
-                      className="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
                     <button
@@ -236,11 +236,11 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[6 + i * 3] = el;
                       }}
-                      className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
                     <div className="text-gray-400">to</div>
-                    <input className="h-10 w-1/2 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
+                    <input className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
                     <button
                       onClick={() => setNow(6 + i * 3)}
                       className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
