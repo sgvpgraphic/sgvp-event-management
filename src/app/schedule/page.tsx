@@ -92,12 +92,11 @@ export default function SchedulePage() {
 
           {/* Main */}
           <div className="h-screen w-full px-6 pt-6 pb-10 overflow-y-auto">
-            <div className="flex items-center justify-between">
-              <div className="text-base font-semibold text-gray-700">Schedule -03 March 2026</div>
-              <div className="flex items-center gap-3">
-                <button className="px-4 py-2 rounded-md bg-[#d41c4a] text-white text-[11px]">PDF</button>
-                <button className="px-3 py-2 rounded-md bg-gray-100 text-[11px] text-gray-700">Speak</button>
-              </div>
+            <div className="flex items-center gap-3">
+              <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
+              <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
+                Schedule
+              </span>
             </div>
 
             <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">

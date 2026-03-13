@@ -88,8 +88,11 @@ export default function ParticipantsPage() {
           </div>
 
           <div className="h-screen w-full px-6 pt-6 pb-10 overflow-y-auto">
-            <div className="flex items-center justify-between">
-              <div className="text-base font-semibold text-gray-700">Participants -03 March 2026</div>
+            <div className="flex items-center gap-3">
+              <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
+              <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
+                Participants
+              </span>
             </div>
 
             <div className="mt-4 grid grid-cols-6 gap-2 text-[11px]">
