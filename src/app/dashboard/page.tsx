@@ -79,7 +79,7 @@ export default function DashboardPage() {
   }, [linePath, points]);
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f7f3f0] via-[#f2f6f8] to-[#eef1f7] flex items-stretch justify-stretch p-0">
-      <div className="w-full min-h-screen bg-[#f5f5f5] rounded-none shadow-none overflow-hidden flex flex-col">
+      <div className="w-full min-h-screen bg-[#f5f5f5] rounded-none shadow-none overflow-visible flex flex-col">
         {/* Top Bar */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 md:px-6 py-3 border-b border-gray-100 bg-white animate-fade-in shadow-[0_2px_8px_rgba(15,23,42,0.03)]" style={{ animationDelay: "80ms" }}>
           <div className="text-[10px] font-semibold tracking-[0.3em] text-gray-500 uppercase">
