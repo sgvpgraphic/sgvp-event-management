@@ -15,6 +15,7 @@ export default function SchedulePage() {
   const timeRefs = useRef<HTMLInputElement[]>([]);
   const [activeTimeIndex, setActiveTimeIndex] = useState<number | null>(null);
   const [rows, setRows] = useState<number[]>([1, 2]);
+  const [speakerRows, setSpeakerRows] = useState<string[]>([""]);
   const formatNow = () => {
     const d = new Date();
     let h = d.getHours();
@@ -44,6 +45,16 @@ export default function SchedulePage() {
   const removeRow = (id: number) => {
     if (!window.confirm("Remove this schedule row?")) return;
     setRows((prev) => prev.filter((r) => r !== id));
+  };
+  const addSpeakerRow = () => {
+    setSpeakerRows((prev) => [...prev, ""]);
+  };
+  const updateSpeakerRow = (idx: number, value: string) => {
+    setSpeakerRows((prev) => prev.map((v, i) => (i === idx ? value : v)));
+  };
+  const removeSpeakerRow = (idx: number) => {
+    if (!window.confirm("Remove this speaker row?")) return;
+    setSpeakerRows((prev) => prev.filter((_, i) => i !== idx));
   };
 
   return (
@@ -281,7 +292,7 @@ export default function SchedulePage() {
 
               <div className="mt-4 flex items-center gap-4 text-[12px] text-gray-600">
                 <button onClick={addRow} className="no-print hover:text-[#d41c4a]">+ Add Schedule</button>
-                <button className="no-print hover:text-[#d41c4a]">+ Add Speaker</button>
+                <button onClick={addSpeakerRow} className="no-print hover:text-[#d41c4a]">+ Add Speaker</button>
                 <button
                   onClick={() => window.print()}
                   className="no-print hover:text-[#d41c4a]"
@@ -290,10 +301,24 @@ export default function SchedulePage() {
                 </button>
               </div>
 
-              <div className="mt-4 flex justify-end">
-                <div className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-[12px] text-gray-700">
-                  પૂજ્ય શ્રીપુરુષોત્તમદાસજી સ્વામી
-                </div>
+              <div className="mt-4 space-y-2">
+                {speakerRows.map((value, idx) => (
+                  <div key={idx} className="flex items-center justify-end gap-2">
+                    <input
+                      value={value}
+                      onChange={(e) => updateSpeakerRow(idx, e.target.value)}
+                      placeholder="Speaker"
+                      className="h-10 w-64 rounded-lg border border-gray-200 bg-gray-50 px-2 text-[12px] text-gray-700"
+                    />
+                    <button
+                      onClick={() => removeSpeakerRow(idx)}
+                      className="no-print h-10 w-10 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-red-600 hover:border-red-300"
+                      title="Remove speaker"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
               </div>
               </div>
             </div>
