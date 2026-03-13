@@ -343,13 +343,13 @@ export default function EventDetailsPage() {
                 </button>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              <div className="mt-6 grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
                 {fields.length === 0 && (
                   <div className="text-xs text-gray-400">Add button par click karo, fields select karo.</div>
                 )}
 
                 {(has("Category") || has("Place") || has("Time") || has("Location") || has("Flyer")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-8">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
                         <div className="md:col-span-2">
@@ -737,7 +737,7 @@ export default function EventDetailsPage() {
                 )}
 
                 {(has("Count") || has("Name") || has("Year") || has("Day")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-8">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Count") && (
                         <div>
