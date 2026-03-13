@@ -301,7 +301,7 @@ export default function SchedulePage() {
               </div>
 
               <div className="mt-4 space-y-2">
-                <div className="flex items-center justify-start gap-2">
+                <div className="flex items-center justify-end gap-2">
                   <button
                     onClick={addSpeakerRow}
                     className="no-print text-[12px] text-gray-600 hover:text-[#d41c4a]"
@@ -310,7 +310,7 @@ export default function SchedulePage() {
                   </button>
                 </div>
                 {speakerRows.map((value, idx) => (
-                  <div key={idx} className="flex items-center justify-start gap-2">
+                  <div key={idx} className="flex items-center justify-end gap-2">
                     <input
                       value={value}
                       onChange={(e) => updateSpeakerRow(idx, e.target.value)}
