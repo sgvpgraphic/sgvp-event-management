@@ -57,7 +57,7 @@ export default function SettingsPage() {
                     <LayoutGrid className="w-4 h-4" />
                     <span className="hidden md:inline">Dashboard</span>
                   </a>
-                  <div className="hidden md:block h-px bg-gray-100 w-16 mx-auto"></div>
+                  <div className="hidden md:block h-px bg-gray-300 w-20 mx-auto"></div>
                   <a
                     href="/create"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
@@ -65,7 +65,7 @@ export default function SettingsPage() {
                     <PlusSquare className="w-4 h-4" />
                     <span className="hidden md:inline">Add Event</span>
                   </a>
-                  <div className="hidden md:block h-px bg-gray-100 w-16 mx-auto"></div>
+                  <div className="hidden md:block h-px bg-gray-300 w-20 mx-auto"></div>
                   <a
                     href="/settings"
                     className="flex items-center gap-2 text-[12px] text-[#d41c4a] font-semibold whitespace-nowrap"
