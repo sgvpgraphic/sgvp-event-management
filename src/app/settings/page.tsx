@@ -41,15 +41,15 @@ export default function SettingsPage() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] h-screen items-center">
           {/* Sidebar */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-3 md:p-6 flex flex-row md:flex-col items-center md:items-center justify-between gap-3 relative overflow-hidden h-full">
-            <div className="flex flex-row md:flex-col items-center gap-2 z-10 w-full md:w-auto">
-              <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
+          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-2 md:p-6 h-14 md:h-auto flex flex-row md:flex-col items-center md:items-center justify-between gap-2 relative overflow-hidden h-full">
+            <div className="flex flex-row md:flex-col items-center gap-2 z-10 w-auto">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
               <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
             </div>
-            <nav className="w-full md:mt-6 md:w-full overflow-x-auto">
-              <div className="flex flex-row md:flex-col gap-4 md:gap-3 justify-center md:justify-start">
+            <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
+              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-center md:items-start">
                   <a
                     href="/dashboard"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"

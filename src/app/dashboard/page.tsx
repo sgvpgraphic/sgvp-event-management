@@ -125,15 +125,15 @@ export default function DashboardPage() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] flex-1 min-h-0">
           {/* Sidebar */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-200 bg-white p-3 md:p-6 flex flex-row md:flex-col items-center md:items-center justify-between gap-3 animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
-            <div className="flex flex-row md:flex-col items-center gap-2 w-full md:w-auto">
-              <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl border border-white/70 bg-white/80 flex items-center justify-center shadow-sm">
+          <div className="border-b md:border-b-0 md:border-r border-gray-200 bg-white p-2 md:p-6 h-14 md:h-auto flex flex-row md:flex-col items-center md:items-center justify-between gap-2 animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
+            <div className="flex flex-row md:flex-col items-center gap-2 w-auto">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-white/70 bg-white/80 flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
               </div>
               <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold tracking-wide">SGVP Event Diary</span>
             </div>
-            <nav className="w-full md:mt-6 md:w-full overflow-x-auto">
-              <div className="flex flex-row md:flex-col gap-4 md:gap-3 justify-center md:justify-start">
+            <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
+              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-center md:items-start">
                   <a
                     href="/dashboard"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
