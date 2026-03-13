@@ -96,12 +96,12 @@ export default function NotesPage() {
                 </span>
               </div>
 
-              <div className="mt-4 flex gap-2 text-[11px] overflow-x-auto no-scrollbar pb-2">
+              <div className="mt-4 flex gap-2 md:gap-3 text-[11px] overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0 md:justify-between">
                 {tabs.map((tab) => (
                   <a
                     key={tab.label}
                     href={tab.href}
-                    className={`min-w-[96px] rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md ${
+                    className={`min-w-[96px] md:min-w-0 md:flex-1 rounded-md ${tab.color} px-2 py-2 text-center font-semibold shadow-md ${
                       tab.label === "Notes"
                         ? "relative text-black border-b-2 border-[#FFEBD3] bg-[#FFEBD3]"
                         : "text-gray-700"
