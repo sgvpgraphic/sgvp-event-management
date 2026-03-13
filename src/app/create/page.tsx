@@ -26,7 +26,7 @@ export default function CreateEventPage() {
 
   return (
     <div className="min-h-screen bg-[#bdbdbd] flex items-stretch justify-stretch p-0">
-      <div className="w-full h-screen bg-white rounded-none shadow-none overflow-hidden relative pt-12">
+      <div className="w-full min-h-screen bg-white rounded-none shadow-none overflow-hidden relative pt-12 flex flex-col">
         {/* Top Bar */}
         <div className="absolute top-0 left-0 right-0 flex flex-col md:flex-row md:items-center md:justify-between gap-2 px-4 md:px-6 py-3 border-b border-gray-100 bg-white z-10">
           <div className="flex items-center gap-4">
@@ -60,7 +60,7 @@ export default function CreateEventPage() {
         </div>
 
         {/* Body */}
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] h-screen items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] flex-1 min-h-0 items-start md:items-center">
           {/* Sidebar */}
           <div className="border-b md:border-b-0 md:border-r border-gray-100 p-4 md:p-6 flex flex-col items-start md:items-center justify-start md:justify-between gap-4 relative overflow-hidden h-full">
             <div className="flex flex-col items-start md:items-center gap-2 z-10 w-full">
@@ -103,7 +103,7 @@ export default function CreateEventPage() {
           </div>
 
           {/* Main */}
-          <div className="h-full w-full px-4 md:px-8 flex items-center justify-center">
+          <div className="h-full w-full px-4 md:px-8 flex items-center justify-center overflow-y-auto">
             <div
               className={`grid items-center transition-all duration-300 ${
                 selectedIndex === null
