@@ -348,7 +348,7 @@ export default function EventDetailsPage() {
                   <div className="text-xs text-gray-400">Add button par click karo, fields select karo.</div>
                 )}
 
-                {(has("Category") || has("Place") || has("Time")) && (
+                {(has("Category") || has("Place") || has("Time") || has("Location") || has("Flyer")) && (
                   <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full h-full flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
@@ -606,13 +606,6 @@ export default function EventDetailsPage() {
                           </div>
                         </div>
                       )}
-                    </div>
-                  </div>
-                )}
-
-                {(has("Location") || has("Flyer") || has("Count") || has("Name") || has("Year") || has("Day") || customSelected.length > 0) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full h-full flex flex-col">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Location") && (
                         <div className="md:col-span-2">
                           <div className="text-[12px] font-semibold text-gray-600">Location</div>
@@ -662,6 +655,13 @@ export default function EventDetailsPage() {
                           </div>
                         </div>
                       )}
+                    </div>
+                  </div>
+                )}
+
+                {(has("Count") || has("Name") || has("Year") || has("Day") || customSelected.length > 0) && (
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-10 w-full h-full flex flex-col">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Count") && (
                         <div>
                           <div className="text-[12px] font-semibold text-gray-600">Count</div>
