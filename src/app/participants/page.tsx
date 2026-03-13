@@ -55,7 +55,7 @@ export default function ParticipantsPage() {
               <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
             </div>
             <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
-              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start">
+              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start md:divide-y md:divide-gray-100">
                   <a
                     href="/dashboard"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
