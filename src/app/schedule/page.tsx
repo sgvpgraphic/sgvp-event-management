@@ -50,7 +50,7 @@ export default function SchedulePage() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] min-h-screen items-start">
           {/* Sidebar */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-2 md:p-6 h-14 md:h-auto flex flex-row md:flex-col items-center md:items-center justify-between gap-2 relative overflow-hidden h-full">
+          <div className="border-b md:border-b-0 md:border-r border-gray-100 p-2 md:p-6 h-14 md:h-full flex flex-row md:flex-col items-center md:items-center justify-between gap-2 relative overflow-hidden h-full">
             <div className="flex flex-row md:flex-col items-center gap-2 z-10 w-auto">
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />

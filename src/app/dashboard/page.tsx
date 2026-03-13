@@ -125,7 +125,7 @@ export default function DashboardPage() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] flex-1 min-h-0">
           {/* Sidebar */}
-          <div className="border-b md:border-b-0 md:border-r border-gray-200 bg-white p-2 md:p-6 h-14 md:h-auto flex flex-row md:flex-col items-center md:items-center justify-between gap-2 animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
+          <div className="border-b md:border-b-0 md:border-r border-gray-200 bg-white p-2 md:p-6 h-14 md:h-full flex flex-row md:flex-col items-center md:items-center justify-between gap-2 animate-fade-in shadow-[4px_0_16px_rgba(15,23,42,0.04)]" style={{ animationDelay: "120ms" }}>
             <div className="flex flex-row md:flex-col items-center gap-2 w-auto">
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl border border-white/70 bg-white/80 flex items-center justify-center shadow-sm">
                 <img src="/Image/event.jpg" alt="Event Logo" className="w-6 h-6 object-contain" />
