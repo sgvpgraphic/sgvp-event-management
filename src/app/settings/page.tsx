@@ -49,7 +49,7 @@ export default function SettingsPage() {
               <span className="hidden md:block text-[11px] text-[#d41c4a] font-semibold text-center">SGVP Event Diary</span>
             </div>
             <nav className="w-auto md:mt-6 md:w-full overflow-x-auto no-scrollbar">
-              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start md:divide-y md:divide-gray-100">
+              <div className="flex flex-row md:flex-col gap-4 md:gap-3 items-start">
                   <a
                     href="/dashboard"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
@@ -57,7 +57,7 @@ export default function SettingsPage() {
                     <LayoutGrid className="w-4 h-4" />
                     <span className="hidden md:inline">Dashboard</span>
                   </a>
-                  <div className="hidden md:block h-px bg-gray-100"></div>
+                  <div className="hidden md:block h-px bg-gray-100 w-16 mx-auto"></div>
                   <a
                     href="/create"
                     className="flex items-center gap-2 text-[12px] text-gray-700 hover:text-[#d41c4a] transition-colors whitespace-nowrap"
@@ -65,7 +65,7 @@ export default function SettingsPage() {
                     <PlusSquare className="w-4 h-4" />
                     <span className="hidden md:inline">Add Event</span>
                   </a>
-                  <div className="hidden md:block h-px bg-gray-100"></div>
+                  <div className="hidden md:block h-px bg-gray-100 w-16 mx-auto"></div>
                   <a
                     href="/settings"
                     className="flex items-center gap-2 text-[12px] text-[#d41c4a] font-semibold whitespace-nowrap"
