@@ -304,6 +304,7 @@ export default function SchedulePage() {
               <div className="mt-4 space-y-2">
                 {speakerRows.map((value, idx) => (
                   <div key={idx} className="flex items-center justify-end gap-2">
+                    <span className="text-[12px] text-gray-500">Add Speaker</span>
                     <input
                       value={value}
                       onChange={(e) => updateSpeakerRow(idx, e.target.value)}
