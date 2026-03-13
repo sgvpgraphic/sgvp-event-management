@@ -299,10 +299,10 @@ export default function EventDetailsPage() {
 
           {/* Main */}
           <div className="h-screen w-full px-4 md:px-6 flex items-start justify-start pt-6 overflow-y-auto">
-            <div className="w-full max-w-6xl 2xl:max-w-[88rem] mx-auto">
+            <div className="w-full max-w-none mx-auto">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
+                  <h1 className="text-base font-semibold text-[#d41c4a]">Event Details</h1>
                   <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
                     Basic Info
                   </span>
@@ -343,13 +343,13 @@ export default function EventDetailsPage() {
                 </button>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 {fields.length === 0 && (
                   <div className="text-xs text-gray-400">Add button par click karo, fields select karo.</div>
                 )}
 
                 {(has("Category") || has("Place") || has("Time") || has("Location") || has("Flyer")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-5">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Category") && (
                         <div className="md:col-span-2">
@@ -737,7 +737,7 @@ export default function EventDetailsPage() {
                 )}
 
                 {(has("Count") || has("Name") || has("Year") || has("Day")) && (
-                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-5">
+                  <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 lg:p-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {has("Count") && (
                         <div>
