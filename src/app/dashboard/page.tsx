@@ -163,7 +163,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Main */}
-          <div className="p-6 bg-white w-full">
+          <div className="p-8 bg-white w-full">
             <div className="w-full max-w-none mx-auto">
             <h1 className="text-base font-semibold text-[#d41c4a] tracking-wide animate-fade-up" style={{ animationDelay: "160ms" }}>
               SGVP Event Diary
@@ -177,20 +177,20 @@ export default function DashboardPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-              <div className="rounded-xl bg-orange-100/70 p-4 animate-fade-up card-glow hover-lift" style={{ animationDelay: "280ms" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
+              <div className="rounded-xl bg-orange-100/70 p-5 min-h-[110px] animate-fade-up card-glow hover-lift" style={{ animationDelay: "280ms" }}>
                 <div className="text-[11px] text-gray-600 font-semibold tracking-wide">Total Users</div>
                 <div className="text-xl font-bold text-gray-800 mt-1">{stats.users}</div>
               </div>
-              <div className="rounded-xl bg-sky-100/70 p-4 animate-fade-up card-glow hover-lift" style={{ animationDelay: "340ms" }}>
+              <div className="rounded-xl bg-sky-100/70 p-5 min-h-[110px] animate-fade-up card-glow hover-lift" style={{ animationDelay: "340ms" }}>
                 <div className="text-[11px] text-gray-600 font-semibold tracking-wide">Total Events</div>
                 <div className="text-xl font-bold text-gray-800 mt-1">{stats.events}</div>
               </div>
-              <div className="rounded-xl bg-green-100/70 p-4 animate-fade-up card-glow hover-lift" style={{ animationDelay: "400ms" }}>
+              <div className="rounded-xl bg-green-100/70 p-5 min-h-[110px] animate-fade-up card-glow hover-lift" style={{ animationDelay: "400ms" }}>
                 <div className="text-[11px] text-gray-600 font-semibold tracking-wide">Storage</div>
                 <div className="text-xl font-bold text-gray-800 mt-1">{stats.storage} GB</div>
               </div>
-              <div className="rounded-xl bg-rose-100/70 p-4 flex items-center justify-between animate-fade-up card-glow hover-lift" style={{ animationDelay: "460ms" }}>
+              <div className="rounded-xl bg-rose-100/70 p-5 min-h-[110px] flex items-center justify-between animate-fade-up card-glow hover-lift" style={{ animationDelay: "460ms" }}>
                 <div>
                   <div className="text-[11px] text-gray-600 font-semibold tracking-wide">Progress</div>
                   <div className="text-xl font-bold text-gray-800 mt-1">{stats.progress}%</div>
@@ -202,8 +202,8 @@ export default function DashboardPage() {
             </div>
 
             {/* Event Analysis + Line Chart */}
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="rounded-xl border border-white/70 bg-white/70 p-5 flex items-center gap-6 animate-fade-up card-glow hover-lift" style={{ animationDelay: "520ms" }}>
+            <div className="mt-7 grid grid-cols-1 lg:grid-cols-2 gap-7">
+              <div className="rounded-xl border border-white/70 bg-white/70 p-6 flex items-center gap-6 min-h-[180px] animate-fade-up card-glow hover-lift" style={{ animationDelay: "520ms" }}>
                 <div className="relative w-32 h-32 float-slow">
                   <div
                     className="absolute inset-0 rounded-full"
@@ -243,7 +243,7 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/70 bg-white/70 p-5 animate-fade-up card-glow hover-lift" style={{ animationDelay: "580ms" }}>
+              <div className="rounded-xl border border-white/70 bg-white/70 p-6 min-h-[180px] animate-fade-up card-glow hover-lift" style={{ animationDelay: "580ms" }}>
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Event Trends</div>
                   <div className="text-[11px] text-gray-500">Last 6 Months</div>
@@ -283,7 +283,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Lower Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 mt-7">
               <div>
                 <div className="text-sm font-semibold text-gray-700 mb-3">Recent Events</div>
                 <div className="rounded-lg border border-gray-100 p-4">
