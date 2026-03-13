@@ -92,7 +92,7 @@ export default function SchedulePage() {
 
           {/* Main */}
           <div className="h-screen w-full px-4 md:px-6 pt-6 pb-10 overflow-y-auto">
-            <div className="w-full max-w-6xl 2xl:max-w-[88rem] mx-auto">
+            <div className="w-full max-w-none mx-auto">
               <div className="flex items-center gap-3">
                 <h1 className="text-sm font-semibold text-[#d41c4a]">Event Details</h1>
                 <span className="text-[10px] px-2 py-[2px] border border-[#FFEBD3] text-black rounded-full">
