@@ -135,7 +135,7 @@ export default function SchedulePage() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
-              <div className="grid grid-cols-7 gap-3 text-[12px]">
+              <div className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px]">
                 <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
@@ -151,7 +151,7 @@ export default function SchedulePage() {
                     Now
                   </button>
                 </div>
-                <div className="flex items-center justify-center text-gray-400">to</div>
+                <div className="flex items-center justify-center text-gray-400 px-2">to</div>
                 <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
@@ -167,9 +167,9 @@ export default function SchedulePage() {
                     Now
                   </button>
                 </div>
-                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
-                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
-                <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="Other" />
+                <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
+                <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
+                <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="Other" />
                 <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
@@ -178,7 +178,7 @@ export default function SchedulePage() {
                     className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 pm"
                   />
-                  <div className="text-gray-400">to</div>
+                  <div className="text-gray-400 px-1">to</div>
                   <input
                     ref={(el) => {
                       if (el) timeRefs.current[3] = el;
@@ -196,7 +196,7 @@ export default function SchedulePage() {
               </div>
 
               {[1, 2].map((i) => (
-                <div key={i} className="grid grid-cols-7 gap-3 text-[12px] mt-3">
+                <div key={i} className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px] mt-3">
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
@@ -212,7 +212,7 @@ export default function SchedulePage() {
                       Now
                     </button>
                   </div>
-                  <div className="flex items-center justify-center text-gray-400">to</div>
+                  <div className="flex items-center justify-center text-gray-400 px-2">to</div>
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
@@ -228,9 +228,9 @@ export default function SchedulePage() {
                       Now
                     </button>
                   </div>
-                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
-                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
-                  <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Other" />
+                  <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
+                  <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
+                  <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Other" />
                   <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
@@ -239,7 +239,7 @@ export default function SchedulePage() {
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
-                    <div className="text-gray-400">to</div>
+                    <div className="text-gray-400 px-1">to</div>
                     <input className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
                     <button
                       onClick={() => setNow(6 + i * 3)}
