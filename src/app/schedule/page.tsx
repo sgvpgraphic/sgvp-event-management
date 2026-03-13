@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { LayoutGrid, PlusSquare, Settings } from "lucide-react";
 
 export default function SchedulePage() {
@@ -13,6 +13,7 @@ export default function SchedulePage() {
     { label: "Notes", color: "bg-[#eee7f9]", href: "/notes" },
   ];
   const timeRefs = useRef<HTMLInputElement[]>([]);
+  const [activeTimeIndex, setActiveTimeIndex] = useState<number | null>(null);
   const formatNow = () => {
     const d = new Date();
     let h = d.getHours();
@@ -25,6 +26,13 @@ export default function SchedulePage() {
   const setNow = (idx: number) => {
     const el = timeRefs.current[idx];
     if (el) el.value = formatNow();
+  };
+  const setNowFor = (indices: number[]) => {
+    if (activeTimeIndex !== null && indices.includes(activeTimeIndex)) {
+      setNow(activeTimeIndex);
+      return;
+    }
+    setNow(indices[indices.length - 1]);
   };
 
   return (
@@ -141,15 +149,10 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[0] = el;
                     }}
+                    onFocus={() => setActiveTimeIndex(0)}
                     className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:00 pm"
                   />
-                  <button
-                    onClick={() => setNow(0)}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
-                  >
-                    Now
-                  </button>
                 </div>
                 <div className="flex items-center justify-center text-gray-400 px-2">to</div>
                 <div className="flex items-center gap-0">
@@ -157,15 +160,10 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[1] = el;
                     }}
+                    onFocus={() => setActiveTimeIndex(1)}
                     className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 am"
                   />
-                  <button
-                    onClick={() => setNow(1)}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
-                  >
-                    Now
-                  </button>
                 </div>
                 <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
                 <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
@@ -175,6 +173,7 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[2] = el;
                     }}
+                    onFocus={() => setActiveTimeIndex(2)}
                     className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:15 pm"
                   />
@@ -183,11 +182,12 @@ export default function SchedulePage() {
                     ref={(el) => {
                       if (el) timeRefs.current[3] = el;
                     }}
+                    onFocus={() => setActiveTimeIndex(3)}
                     className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                     defaultValue="05:30 am"
                   />
                   <button
-                    onClick={() => setNow(2)}
+                    onClick={() => setNowFor([2, 3])}
                     className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
@@ -202,15 +202,10 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[4 + i * 3] = el;
                       }}
+                      onFocus={() => setActiveTimeIndex(4 + i * 3)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
-                    <button
-                      onClick={() => setNow(4 + i * 3)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
-                    >
-                      Now
-                    </button>
                   </div>
                   <div className="flex items-center justify-center text-gray-400 px-2">to</div>
                   <div className="flex items-center gap-0">
@@ -218,15 +213,10 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[5 + i * 3] = el;
                       }}
+                      onFocus={() => setActiveTimeIndex(5 + i * 3)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="Time"
                     />
-                    <button
-                      onClick={() => setNow(5 + i * 3)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
-                    >
-                      Now
-                    </button>
                   </div>
                   <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
                   <input className="h-12 w-full rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
@@ -236,13 +226,21 @@ export default function SchedulePage() {
                       ref={(el) => {
                         if (el) timeRefs.current[6 + i * 3] = el;
                       }}
+                      onFocus={() => setActiveTimeIndex(6 + i * 3)}
                       className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
                       placeholder="A Time"
                     />
                     <div className="text-gray-400 px-1">to</div>
-                    <input className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
+                    <input
+                      ref={(el) => {
+                        if (el) timeRefs.current[7 + i * 3] = el;
+                      }}
+                      onFocus={() => setActiveTimeIndex(7 + i * 3)}
+                      className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2"
+                      placeholder="A Time"
+                    />
                     <button
-                      onClick={() => setNow(6 + i * 3)}
+                      onClick={() => setNowFor([6 + i * 3, 7 + i * 3])}
                       className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
