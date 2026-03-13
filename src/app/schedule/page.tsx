@@ -27,12 +27,12 @@ export default function SchedulePage() {
     const el = timeRefs.current[idx];
     if (el) el.value = formatNow();
   };
-  const setNowFor = (indices: number[]) => {
+  const setNowForRow = (indices: number[]) => {
     if (activeTimeIndex !== null && indices.includes(activeTimeIndex)) {
       setNow(activeTimeIndex);
       return;
     }
-    setNow(indices[indices.length - 1]);
+    setNow(indices[0]);
   };
 
   return (
@@ -187,7 +187,7 @@ export default function SchedulePage() {
                     defaultValue="05:30 am"
                   />
                   <button
-                    onClick={() => setNowFor([2, 3])}
+                    onClick={() => setNowForRow([0, 1, 2, 3])}
                     className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
@@ -197,6 +197,7 @@ export default function SchedulePage() {
 
               {[1, 2].map((i) => {
                 const base = 4 + (i - 1) * 4;
+                const rowIndices = [base, base + 1, base + 2, base + 3];
                 return (
                 <div key={i} className="grid grid-cols-[auto_auto_auto_1fr_1fr_1fr_auto] gap-2 text-[12px] mt-3">
                   <div className="flex items-center gap-0">
@@ -242,7 +243,7 @@ export default function SchedulePage() {
                       placeholder="A Time"
                     />
                     <button
-                      onClick={() => setNowFor([base + 2, base + 3])}
+                      onClick={() => setNowForRow(rowIndices)}
                       className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
