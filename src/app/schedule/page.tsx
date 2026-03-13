@@ -136,7 +136,7 @@ export default function SchedulePage() {
 
               <div className="mt-6 rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
               <div className="grid grid-cols-7 gap-3 text-[12px]">
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
                       if (el) timeRefs.current[0] = el;
@@ -146,13 +146,13 @@ export default function SchedulePage() {
                   />
                   <button
                     onClick={() => setNow(0)}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
                 </div>
                 <div className="flex items-center justify-center text-gray-400">to</div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
                       if (el) timeRefs.current[1] = el;
@@ -162,7 +162,7 @@ export default function SchedulePage() {
                   />
                   <button
                     onClick={() => setNow(1)}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
@@ -170,7 +170,7 @@ export default function SchedulePage() {
                 <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પૂજન અને સ્વાગત" />
                 <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="પરમ પુજ્ય શ્રીલાડુદાસજી સ્વામી" />
                 <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" defaultValue="Other" />
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-0">
                   <input
                     ref={(el) => {
                       if (el) timeRefs.current[2] = el;
@@ -188,7 +188,7 @@ export default function SchedulePage() {
                   />
                   <button
                     onClick={() => setNow(2)}
-                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                    className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                   >
                     Now
                   </button>
@@ -197,7 +197,7 @@ export default function SchedulePage() {
 
               {[1, 2].map((i) => (
                 <div key={i} className="grid grid-cols-7 gap-3 text-[12px] mt-3">
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
                         if (el) timeRefs.current[4 + i * 3] = el;
@@ -207,13 +207,13 @@ export default function SchedulePage() {
                     />
                     <button
                       onClick={() => setNow(4 + i * 3)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
                   </div>
                   <div className="flex items-center justify-center text-gray-400">to</div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
                         if (el) timeRefs.current[5 + i * 3] = el;
@@ -223,7 +223,7 @@ export default function SchedulePage() {
                     />
                     <button
                       onClick={() => setNow(5 + i * 3)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
@@ -231,7 +231,7 @@ export default function SchedulePage() {
                   <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Program Details" />
                   <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Name" />
                   <input className="h-12 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="Other" />
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-0">
                     <input
                       ref={(el) => {
                         if (el) timeRefs.current[6 + i * 3] = el;
@@ -243,7 +243,7 @@ export default function SchedulePage() {
                     <input className="h-10 w-24 rounded-lg border border-gray-200 bg-gray-50 px-2" placeholder="A Time" />
                     <button
                       onClick={() => setNow(6 + i * 3)}
-                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a] ml-1"
+                      className="h-10 w-12 rounded-lg border border-gray-200 text-[11px] text-gray-600 hover:text-[#d41c4a]"
                     >
                       Now
                     </button>
